@@ -7,7 +7,12 @@
 </head>
 <body>
     <a-scene>
-        <a-box rotation="45 90 180" color="red" position="0 0 -5" rotation="0 45 45" scale="2 2 2"></a-box>
+        <a-entity geometry="primitive: cone; radiusTop: 1" >
+          <a-animation attribute="geometry.radiusTop" to="0.5" repeat="indefinite"></a-animation>
+        </a-entity>
+        <a-box rotation="45 90 180" color="red" position="0 0 -5" rotation="0 45 45" scale="2 2 2">
+            <a-animation attribute="geometry.radiusTop" to="0.5" repeat="indefinite"></a-animation>
+        </a-box>
         <a-box rotation="45 90 180" color="red" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box>
         <a-box rotation="45 90 180" color="red" position="0 8 -5" rotation="0 45 45" scale="2 2 2"></a-box>
         <a-box rotation="45 90 180" color="red" position="0 14 -5" rotation="0 45 45" scale="2 2 2"></a-box>
