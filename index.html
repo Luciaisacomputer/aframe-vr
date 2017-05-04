@@ -7,13 +7,21 @@
 </head>
 <body>
     <a-scene>
+        <a-entity camera="userHeight: 1.6" camera look-controls universal-controls></a-entity>
         <a-entity geometry="primitive: cone; radiusTop: 1" >
           <a-animation attribute="geometry.radiusTop" to="0.5" repeat="indefinite"></a-animation>
         </a-entity>
         <a-box rotation="45 90 180" color="red" position="0 0 -5" rotation="0 45 45" scale="2 2 2">
+            <a-animation attribute="position" from="0 0 -5" to="1 0 -5" repeat="indefinite"></a-animation>
             <a-animation attribute="material.color" from="green" to="red" dur="1000" repeat="indefinite"></a-animation>
         </a-box>
         <a-box rotation="45 90 180" color="red" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
+            <a-animation attribute="rotation"
+            dur="10000"
+            fill="forwards"
+            to="0 360 0"
+            repeat="indefinite">
+            </a-animation>
             <a-animation attribute="material.color" from="blue" to="purple" dur="1000" repeat="indefinite"></a-animation>
         </a-box>
         <a-box rotation="45 90 180" color="red" position="0 8 -5" rotation="0 45 45" scale="2 2 2">
@@ -23,9 +31,22 @@
             <a-animation attribute="material.color" from="yellow" to="orange" dur="1000" repeat="indefinite"></a-animation>
         </a-box>
         <a-box rotation="45 90 180" color="red" position="0 20 -5" rotation="0 45 45" scale="2 2 2">
+            <a-animation attribute="rotation"
+            dur="10000"
+            fill="forwards"
+            to="0 360 0"
+            repeat="indefinite">
+            </a-animation>
             <a-animation attribute="material.color" from="magenta" to="pink" dur="1000" repeat="indefinite"></a-animation>
         </a-box>
-        <a-torus-knot rotation="45 90 180" color="#B84A39" arc="180" p="2" q="7" radius="5" radius-tubular="0.1"></a-torus-knot>
+        <a-torus-knot rotation="45 90 180" color="#B84A39" arc="180" p="2" q="7" radius="5" radius-tubular="0.1">
+            <a-animation attribute="rotation"
+            dur="10000"
+            fill="forwards"
+            to="0 360 0"
+            repeat="indefinite">
+            </a-animation>
+        </a-torus-knot>
     </a-scene>
 </body>
 </html>
